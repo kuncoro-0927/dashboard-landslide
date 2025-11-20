@@ -20,7 +20,7 @@
             "dest": "/api/index.php"
         }
     ],
-    "installCommand": "composer install --no-dev && npm install",
+    "installCommand": "php composer.phar install --no-dev && npm install",
     "buildCommand": "npm run build",
     "outputDirectory": "public"
 }
