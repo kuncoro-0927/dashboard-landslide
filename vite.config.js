@@ -4,9 +4,6 @@ import laravel from "laravel-vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-    // ✅ Tambahkan base path EKSPLISIT ke lokasi folder build
-    base: "/build/",
-
     plugins: [
         laravel({
             input: [
