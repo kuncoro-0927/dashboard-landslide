@@ -8,6 +8,15 @@
       "app.css"
     ]
   },
+  "resources/css/map.css": {
+    "file": "assets/map-PagXSv9q.css",
+    "src": "resources/css/map.css",
+    "isEntry": true,
+    "name": "map",
+    "names": [
+      "map.css"
+    ]
+  },
   "resources/js/app.js": {
     "file": "assets/app-BJOE6DwY.js",
     "name": "app",
