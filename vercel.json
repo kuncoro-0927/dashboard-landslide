@@ -7,10 +7,9 @@
 
     "routes": [
         {
-            "src": "/(.*\\.(css|js|map|ico|svg|png|jpg|jpeg|gif|webp|ttf|woff|woff2|eot))",
-            "dest": "/public/$1"
+            "src": "/build/(.*)",
+            "dest": "/public/build/$1"
         },
-
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
