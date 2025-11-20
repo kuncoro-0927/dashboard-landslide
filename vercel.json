@@ -4,6 +4,7 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.2" }
     },
+
     "routes": [
         {
             "src": "/(.*\\.(css|js|map|ico|svg|png|jpg|jpeg|gif|webp|ttf|woff|woff2|eot))",
