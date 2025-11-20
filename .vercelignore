@@ -1,7 +1,1 @@
-/node_modules
-/storage
-/tests
-.env
-.git
-.github
 /vendor
