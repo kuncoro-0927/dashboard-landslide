@@ -6,13 +6,11 @@
             "runtime": "vercel-php@0.7.2"
         }
     },
+
+    "installCommand": "composer dump-autoload --optimize --no-dev && php artisan optimize:clear",
     "buildCommand": "npm run build",
     "outputDirectory": "public",
     "routes": [
-        {
-            "src": "/_next/static/(.*)",
-            "dest": "/public/_next/static/$1"
-        },
         {
             "src": "/(.*\\.(css|js|map|ico|svg|png|jpg|jpeg|gif|webp|ttf|woff|woff2|eot))",
             "dest": "/public/$1"
