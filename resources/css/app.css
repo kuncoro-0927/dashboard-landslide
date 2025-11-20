@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+/* body:not(.auth-page) { */
+body {
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(180, 220, 255, 0.85),
+            transparent 55%
+        ),
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(160, 230, 255, 0.75),
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 45% 80%,
+            rgba(130, 170, 255, 0.75),
+            transparent 70%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(210, 240, 255, 0.8),
+            transparent 65%
+        ),
+        /* 👉 Tambahan warna purple lembut */
+            radial-gradient(
+                circle at 30% 85%,
+                rgba(180, 160, 255, 0.55),
+                transparent 70%
+            ),
+        radial-gradient(
+            circle at 90% 40%,
+            rgba(200, 150, 255, 0.45),
+            transparent 65%
+        ),
+        #eef4ff;
+    background-size: cover;
+}
+
+/* GREEN - Normal */
+@keyframes pulse-green {
+    0%,
+    100% {
+        background-color: rgba(34, 197, 94, 0.6); /* green-500 */
+        box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+    }
+    50% {
+        background-color: rgba(21, 128, 61, 0.9); /* green-700, lebih cerah */
+        box-shadow: 0 0 20px rgba(21, 128, 61, 0.9);
+    }
+}
+
+[data-status="normal"].active {
+    animation-name: pulse-green;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* YELLOW - Waspada */
+@keyframes pulse-yellow {
+    0%,
+    100% {
+        background-color: rgba(250, 204, 21, 0.6); /* yellow-400 */
+        box-shadow: 0 0 10px rgba(250, 204, 21, 0.6);
+    }
+    50% {
+        background-color: rgba(202, 138, 4, 0.9); /* yellow-700, lebih cerah */
+        box-shadow: 0 0 20px rgba(202, 138, 4, 0.9);
+    }
+}
+
+[data-status="waspada"].active {
+    animation-name: pulse-yellow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* RED - Bahaya */
+@keyframes pulse-red {
+    0%,
+    100% {
+        background-color: rgba(239, 68, 68, 0.6); /* red-500 */
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+    }
+    50% {
+        background-color: rgba(220, 38, 38, 0.9); /* red-700 */
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.9);
+    }
+}
+
+[data-status="bahaya"].active {
+    animation-name: pulse-red;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
