@@ -6,6 +6,7 @@
             "runtime": "vercel-php@0.6.0"
         }
     },
+    "buildCommand": "npm run build",
     "routes": [
         {
             "src": "/_next/static/(.*)",
@@ -19,8 +20,5 @@
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
-    ],
-    "installCommand": "php composer.phar install --no-dev && npm install",
-    "buildCommand": "npm run build",
-    "outputDirectory": "public"
+    ]
 }
